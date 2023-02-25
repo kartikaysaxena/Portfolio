@@ -1,0 +1,22 @@
+.h-auto-img {
+    height: 15vw;
+}
+.h-auto-img1{
+    height: 3.5vw;
+}
+hr {
+    position: relative;
+    top: 20px;
+    border: none;
+    height: 2px;
+    width: 100%;
+    background: black;
+    margin-bottom: 4rem;
+
+}
+.margin-top {
+    margin-top:10rem
+}
+.margin-bottom {
+    margin-bottom: 10rem;
+}
