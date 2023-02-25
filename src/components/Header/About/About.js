@@ -2,11 +2,12 @@
 
 import img from './Photo.jpg'
 import './About.css'
+import '../Skills/skills.css'
 export default function About() {
   return (
     <div id='about'>
         <div className=" mt-5">
-            <div className="d-flex flex-row justify-content-center mb-5">
+            <div className="d-flex flex-row justify-content-center mb-5 flex-wrap">
                 <div className="p-2 d-flex flex-column width mt-5">
                     <div className="p-2 " ><p className='text-center display-4 color'>I create websites</p>
 <p className="display-4">that are very much intriguing.</p></div>
@@ -15,7 +16,7 @@ export default function About() {
 
                 </div>
                 <div className="p-2 mb-5">
-                    <img src={img} alt="" className="img-fluid" />
+                    <img src={img} alt="" className="hf" />
                 </div>
             </div>
         </div>

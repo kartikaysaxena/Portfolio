@@ -1,8 +1,9 @@
 .h-auto-img {
-    height: 15vw;
+    margin-top: -1rem;
+    max-width: 50%;
 }
 .h-auto-img1{
-    height: 3.5vw;
+    height: 15vw;
 }
 hr {
     position: relative;
@@ -19,4 +20,7 @@ hr {
 }
 .margin-bottom {
     margin-bottom: 10rem;
+}
+.hf {
+    max-width: 100%;
 }

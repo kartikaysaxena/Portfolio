@@ -11,10 +11,10 @@ export default function Skills() {
             <p className='display-4 color'>My Tech Stack</p>
         </div>
         <div className="d-flex flex-row justify-content-center">
-            <div className="p-2"><img src={html} alt="" className='img-fluid h-auto-img'/></div>
-            <div className="p-2"><img src={css} alt="" className='img-fluid h-auto-img' /></div>
-            <div className="p-2"><img src={Java} alt="" className='img-fluid h-auto-img' /></div>
-            <div className="p-2"><img src={node} alt="" className='img-fluid h-auto-img' /></div>
+            <div className="p-2"><img src={html} alt="" className='img-fluid h-auto-img1'/></div>
+            <div className="p-2"><img src={css} alt="" className='img-fluid h-auto-img1' /></div>
+            <div className="p-2"><img src={Java} alt="" className='img-fluid h-auto-img1' /></div>
+            <div className="p-2"><img src={node} alt="" className='img-fluid h-auto-img1' /></div>
         </div>
     </div>
   )
