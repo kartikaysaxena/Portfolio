@@ -22,7 +22,10 @@ export default function Header() {
               <a className="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
-            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Resume</button>
+          <a href="https://drive.google.com/file/d/1qzKX0GiugU8MeR63Wt0DX0SuI-g1PvHS/view?usp=drivesdk">
+          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Resume</button>
+          </a>
+
         </div>
       </nav>
     </div>
