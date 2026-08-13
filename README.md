@@ -35,7 +35,7 @@ serve.mjs           Zero-dependency dev server
 CNAME               ksaxena.tech
 ```
 
-The **Résumé** nav link points straight at the PDF published by
+The **Resume** nav link points straight at the PDF published by
 [resume-vault](https://github.com/kartikaysaxena/resume-vault), where a GitHub
 Action recompiles it from LaTeX on every push:
 
