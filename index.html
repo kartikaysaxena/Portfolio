@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kartikay Saxena — Software Engineer</title>
+  <meta name="description" content="Kartikay Saxena — Software Engineering Consultant & IIT Patna graduate. Go, TypeScript, Python, AWS, Kubernetes. Open-source contributor (GSoC, CNCF LitmusChaos)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#top">KS<span class="dot">.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <p class="eyebrow">Hi, my name is</p>
+      <h1 class="hero-name">Kartikay Saxena<span class="dot">.</span></h1>
+      <p class="hero-title">I build software for the cloud.</p>
+      <p class="hero-desc">
+        Software Engineering Consultant and B.Tech graduate from <strong>Indian Institute of Technology Patna</strong>.
+        I specialize in <strong>Go, TypeScript & Python</strong>, scalable backend systems, cloud infrastructure,
+        and open-source software.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#experience">View my work</a>
+        <a class="btn btn-ghost" href="#resume">Get resume</a>
+      </div>
+      <div class="hero-meta">
+        <span class="chip">🏫 IIT Patna · 2025</span>
+        <span class="chip">⚙️ Consultant · CNCF · GSoC</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <h2 class="section-title">About me</h2>
+      <p>
+        I'm a software engineer who loves building reliable, observable systems. My experience spans
+        consulting work on production Django + AWS platforms, open-source contributions to the
+        <strong>Cloud Native Computing Foundation</strong> (LitmusChaos) and <strong>Google Summer of Code</strong>
+        (Organic Maps), and building blockchain tooling with <strong>Go</strong>.
+      </p>
+      <p>
+        I care about performance — optimizing APIs, cutting latencies by 95%+, and designing systems that
+        scale cleanly. I've also contributed to projects across CNCF, Google, and Dhiway.
+      </p>
+      <div class="skill-tags">
+        <span>Go</span><span>TypeScript</span><span>JavaScript</span><span>Python</span><span>Rust</span><span>C++</span><span>SQL</span>
+        <span>Node.js</span><span>React</span><span>Django</span><span>Express</span>
+        <span>AWS</span><span>Docker</span><span>Kubernetes</span><span>Kafka</span><span>Prometheus</span><span>MongoDB</span><span>MySQL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section section-alt" id="experience">
+    <div class="section-inner">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section-inner">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects" id="projectsGrid"></div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section class="section section-alt" id="resume">
+    <div class="section-inner center">
+      <h2 class="section-title">Resume</h2>
+      <p class="muted">
+        Download my latest resume as a PDF — updated automatically from my resume vault.
+      </p>
+      <a class="btn btn-primary" href="https://kartikaysaxena.github.io/resume-vault/software_engineer/software-engineer.pdf" target="_blank" rel="noopener">
+        ⬇ Download PDF Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="section-inner center">
+      <h2 class="section-title">Get in touch</h2>
+      <p class="muted">Have an opportunity or just want to say hi? I'd love to hear from you.</p>
+      <div class="contact-links">
+        <a href="mailto:kartikaysaxena12@gmail.com">✉️ kartikaysaxena12@gmail.com</a>
+        <a href="https://github.com/kartikaysaxena" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/kartikay-saxena-33ba01223/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Kartikay Saxena · Built with care.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
