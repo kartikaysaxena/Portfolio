@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Not found — Kartikay Saxena</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <!-- Absolute paths: GitHub Pages serves this file from arbitrary depths. -->
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script>
+      (function () {
+        var prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var stored = null;
+        try {
+          stored = localStorage.getItem("color-scheme");
+        } catch (e) {}
+        if (stored === "dark" || (!stored && prefersDark))
+          document.documentElement.classList.add("dark");
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/" class="logo" aria-label="Kartikay Saxena — home">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <title>Kartikay Saxena @ ksaxena.tech</title>
+          <path
+            class="stroke"
+            d="M32 14C29 38 29 62 32 86M32 54C44 45 59 31 70 15M38 50C50 60 63 72 74 87"
+          />
+        </svg>
+      </a>
+
+      <nav class="nav">
+        <div class="spacer"></div>
+        <div class="right">
+          <a href="/projects.html" title="Projects">
+            <span class="label">Projects</span>
+            <span class="i-lightbulb icon-only"></span>
+          </a>
+          <a href="/experience.html" title="Experience">
+            <span class="label">Experience</span>
+            <span class="i-briefcase icon-only"></span>
+          </a>
+          <a href="/resume.html" title="Résumé">
+            <span class="label">Résumé</span>
+            <span class="i-file icon-only"></span>
+          </a>
+          <button
+            data-toggle-scheme
+            title="Toggle colour scheme"
+            aria-label="Toggle colour scheme"
+          >
+            <span class="i-sun"></span><span class="i-moon"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="prose slide-enter-content" style="margin-top: 12vh">
+        <h1>404</h1>
+        <p>
+          There’s nothing at this address. The branches on the way here grew
+          somewhere else.
+        </p>
+        <p>
+          <a class="btn" href="/"><span class="i-home"></span> Back home</a>
+        </p>
+      </div>
+    </main>
+
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/plum.js"></script>
+  </body>
+</html>

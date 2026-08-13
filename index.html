@@ -1,99 +1,251 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kartikay Saxena</title>
-  <meta name="description" content="Kartikay Saxena — Software engineer. IIT Patna graduate, consultant, and open-source contributor." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="nav">
-    <a class="nav-brand" href="#top">Kartikay Saxena</a>
-    <nav class="nav-links">
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kartikay Saxena</title>
+    <meta
+      name="description"
+      content="Kartikay Saxena — software engineer working across Go, TypeScript and Python. Google Summer of Code, CNCF LitmusChaos, IIT Patna."
+    />
+    <meta name="author" content="Kartikay Saxena" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://ksaxena.tech/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kartikay Saxena" />
+    <meta property="og:url" content="https://ksaxena.tech/" />
+    <meta
+      property="og:description"
+      content="Software engineer working across Go, TypeScript and Python."
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script>
+      // Set the colour scheme before first paint to avoid a flash.
+      (function () {
+        var prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var stored = null;
+        try {
+          stored = localStorage.getItem("color-scheme");
+        } catch (e) {}
+        if (stored === "dark" || (!stored && prefersDark))
+          document.documentElement.classList.add("dark");
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo" aria-label="Kartikay Saxena — home">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <title>Kartikay Saxena @ ksaxena.tech</title>
+          <path
+            class="stroke"
+            d="M32 14C29 38 29 62 32 86M32 54C44 45 59 31 70 15M38 50C50 60 63 72 74 87"
+          />
+        </svg>
+      </a>
 
-  <main id="top">
-    <h1 class="name">Kartikay Saxena</h1>
+      <nav class="nav">
+        <div class="spacer"></div>
+        <div class="right">
+          <a href="projects.html" title="Projects">
+            <span class="label">Projects</span>
+            <span class="i-lightbulb icon-only"></span>
+          </a>
+          <a href="experience.html" title="Experience">
+            <span class="label">Experience</span>
+            <span class="i-briefcase icon-only"></span>
+          </a>
+          <a href="resume.html" title="Résumé">
+            <span class="label">Résumé</span>
+            <span class="i-file icon-only"></span>
+          </a>
+          <a
+            href="https://github.com/kartikaysaxena"
+            target="_blank"
+            rel="noopener"
+            title="GitHub"
+            ><span class="i-github"></span
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/kartikay-saxena-33ba01223/"
+            target="_blank"
+            rel="noopener"
+            title="LinkedIn"
+            ><span class="i-linkedin"></span
+          ></a>
+          <button
+            data-toggle-scheme
+            title="Toggle colour scheme"
+            aria-label="Toggle colour scheme"
+          >
+            <span class="i-sun"></span><span class="i-moon"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
 
-    <article class="bio">
-      <p>
-        Hey! I'm <strong>Kartikay Saxena</strong>, a software engineer who loves building
-        reliable systems for the cloud.
-      </p>
+    <main>
+      <div class="prose" style="margin-bottom: 2rem">
+        <h1 class="slide-enter" style="--enter-stage: 0; margin-bottom: 0">
+          Kartikay Saxena
+        </h1>
+      </div>
 
-      <p>
-        Working as a <a href="#experience">Software Engineering Consultant</a> at Assured Health Technologies<br />
-        B.Tech graduate of <a href="https://www.iitp.ac.in" target="_blank" rel="noopener">IIT Patna</a><br />
-        Open-source contributor — <a href="https://summerofcode.withgoogle.com" target="_blank" rel="noopener">Google Summer of Code</a> · <a href="https://litmuschaos.io" target="_blank" rel="noopener">CNCF LitmusChaos</a>
-      </p>
+      <article class="prose slide-enter-content">
+        <p>
+          Hey! I’m Kartikay, a software engineer who enjoys making slow systems
+          fast and fragile ones boring.
+        </p>
 
-      <p>
-        I enjoy optimizing performance — cutting API latencies by 95%+, designing systems that
-        scale cleanly, and building tools that make engineers more productive. My stack centers on
-        <strong>Go</strong>, <strong>TypeScript</strong>, and <strong>Python</strong>, with AWS, Kubernetes,
-        and the broader cloud-native ecosystem. Here's my <a href="#projects">projects list</a>.
-      </p>
+        <p>
+          Most recently a <strong>Software Engineering Consultant</strong> at
+          Assured Health Technologies<br />
+          Open source through
+          <a
+            class="magic-link"
+            href="https://litmuschaos.io"
+            target="_blank"
+            rel="noopener"
+            ><span
+              class="magic-link-image"
+              style="background-image: url('https://github.com/litmuschaos.png')"
+            ></span
+            >LitmusChaos</a
+          >
+          <a
+            class="magic-link"
+            href="https://organicmaps.app"
+            target="_blank"
+            rel="noopener"
+            ><span
+              class="magic-link-image"
+              style="background-image: url('https://github.com/organicmaps.png')"
+            ></span
+            >Organic Maps</a
+          >
+          <a
+            class="magic-link"
+            href="https://github.com/dhiway"
+            target="_blank"
+            rel="noopener"
+            ><span
+              class="magic-link-image"
+              style="background-image: url('https://github.com/dhiway.png')"
+            ></span
+            >CORD</a
+          ><br />
+          B.Tech from
+          <a href="https://www.iitp.ac.in" target="_blank" rel="noopener"
+            >IIT Patna</a
+          >
+        </p>
 
-      <p>
-        Outside of programming, I enjoy problem solving, contributing to open source, and
-        exploring how good engineering habits ship better software.
-      </p>
+        <p>
+          I spend most of my time somewhere between an API handler and the
+          cluster it runs on — mainly in <strong>Go</strong>,
+          <strong>TypeScript</strong> and <strong>Python</strong>, with
+          Kubernetes, AWS and the rest of the cloud-native toolbox underneath.
+          The work I like best is the unglamorous kind: finding the index that
+          takes a query from <span class="metric">35.7s</span> to
+          <span class="metric">3.7s</span>, or the extra round trip that was
+          quietly costing a login <span class="metric">1.7s</span>.
+        </p>
 
-      <p>Find me on</p>
+        <p>
+          Along the way I’ve written a Go SDK for a blockchain, an upgrade agent
+          that migrates a CNCF control plane between versions without anyone
+          babysitting it, and an edge proxy on Cloudflare Workers that Organic
+          Maps still routes tens of thousands of requests a day through. You can
+          find the <a href="projects.html">full projects list here</a>, or a
+          longer account of <a href="experience.html">where I’ve worked</a>.
+        </p>
 
-      <p class="social">
-        <a href="https://github.com/kartikaysaxena" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/kartikay-saxena-33ba01223/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://leetcode.com/u/annoyingdeadlock/" target="_blank" rel="noopener">LeetCode</a>
-      </p>
+        <p>
+          Outside of shipping things, I like competitive programming, poking at
+          other people’s infrastructure diagrams, and the slow satisfaction of
+          deleting code that turned out to be unnecessary.
+        </p>
 
-      <p>Or mail me at <a href="mailto:kartikaysaxena12@gmail.com">kartikaysaxena12@gmail.com</a></p>
-    </article>
+        <hr />
 
-    <section id="projects" class="block">
-      <h2>Projects</h2>
-      <p><a href="https://github.com/kartikaysaxena/go-microservice" target="_blank" rel="noopener">Go-microservice</a> — HTTP API server with gRPC rate throttling, Redis caching, and Prometheus/Grafana observability.</p>
-      <p><a href="https://organicmaps.app" target="_blank" rel="noopener">Cloudflare Maps Proxy</a> — GSoC project serving 50K+ req/day at 99.9% uptime on Cloudflare Workers.</p>
-      <p><a href="https://dhiway.com" target="_blank" rel="noopener">CORD Blockchain Go SDK</a> — multi-modular Go SDK with 95% test coverage.</p>
-    </section>
+        <p>Find me on</p>
 
-    <section id="experience" class="block">
-      <h2>Experience</h2>
-      <p><strong>Software Engineering Consultant</strong> — <a href="#contact">Assured Health Technologies</a>, Bengaluru · Aug 2025 – Jan 2026</p>
-      <p><strong>Software Engineering Intern</strong> — <a href="https://litmuschaos.io" target="_blank" rel="noopener">CNCF LitmusChaos</a>, Remote · Jul 2024 – Sep 2024</p>
-      <p><strong>Software Engineering Intern</strong> — <a href="https://dhiway.com" target="_blank" rel="noopener">Code For GovTech @ Dhiway</a>, Remote · Jun 2024 – Aug 2024</p>
-      <p><strong>Google Summer of Code Intern</strong> — <a href="https://organicmaps.app" target="_blank" rel="noopener">Organic Maps</a>, Remote · Apr 2023 – Jul 2023</p>
-    </section>
+        <p class="socials">
+          <a
+            href="https://github.com/kartikaysaxena"
+            target="_blank"
+            rel="noopener"
+            ><span class="i-github"></span> GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/kartikay-saxena-33ba01223/"
+            target="_blank"
+            rel="noopener"
+            ><span class="i-linkedin"></span> LinkedIn</a
+          >
+          <a
+            href="https://leetcode.com/u/annoyingdeadlock/"
+            target="_blank"
+            rel="noopener"
+            ><span class="i-leetcode"></span> LeetCode</a
+          >
+        </p>
 
-    <section id="resume" class="block">
-      <h2>Resume</h2>
-      <p>Download my latest resume: <a href="https://kartikaysaxena.github.io/resume-vault/software_engineer/software-engineer.pdf" target="_blank" rel="noopener">software-engineer.pdf</a></p>
-    </section>
+        <p>
+          Or mail me at
+          <span class="mono"
+            >kartikaysaxena12<span
+              class="i-at"
+              style="vertical-align: -0.15em"
+            ></span
+            >gmail.com</span
+          >
+        </p>
 
-    <section id="contact" class="block">
-      <h2>Contact</h2>
-      <p>
-        <a href="mailto:kartikaysaxena12@gmail.com">kartikaysaxena12@gmail.com</a> ·
-        <a href="https://github.com/kartikaysaxena" target="_blank" rel="noopener">GitHub</a> ·
-        <a href="https://www.linkedin.com/in/kartikay-saxena-33ba01223/" target="_blank" rel="noopener">LinkedIn</a>
-      </p>
-    </section>
-  </main>
+        <hr />
 
-  <footer class="footer">
-    <p>© <span id="year"></span> Kartikay Saxena</p>
-  </footer>
+        <p>
+          I’m open to interesting backend and infrastructure work — if you’re
+          building something where latency, reliability or developer experience
+          actually matters,
+          <a href="mailto:kartikaysaxena12@gmail.com">get in touch</a>.
+        </p>
 
-  <script src="app.js"></script>
-  <script src="artplum.js"></script>
-</body>
+        <p>
+          <a class="btn" href="resume.html"
+            ><span class="i-file"></span> Read my résumé</a
+          >
+        </p>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <span
+        ><a
+          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+          target="_blank"
+          rel="noopener"
+          >CC BY-NC-SA 4.0</a
+        >
+        2023–PRESENT © Kartikay Saxena</span
+      >
+      <span style="flex: auto"></span>
+      <a
+        href="https://github.com/kartikaysaxena/Portfolio"
+        target="_blank"
+        rel="noopener"
+        >Source</a
+      >
+    </footer>
+
+    <button class="to-top" title="Scroll to top" aria-label="Scroll to top">
+      <span class="i-arrow-up"></span>
+    </button>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/plum.js"></script>
+  </body>
 </html>

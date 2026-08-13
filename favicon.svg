@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Kartikay Saxena @ ksaxena.tech</title>
+  <style>
+    .s { fill: none; stroke: #101010; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round }
+    @media (prefers-color-scheme: dark) { .s { stroke: #fdfdfd } }
+  </style>
+  <path class="s" d="M32 14C29 38 29 62 32 86M32 54C44 45 59 31 70 15M38 50C50 60 63 72 74 87"/>
+</svg>

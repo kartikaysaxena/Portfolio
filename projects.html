@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects — Kartikay Saxena</title>
+    <meta
+      name="description"
+      content="Projects Kartikay Saxena has built or contributed to, across open source, infrastructure and the edge."
+    />
+    <meta name="author" content="Kartikay Saxena" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://ksaxena.tech/projects.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Projects — Kartikay Saxena" />
+    <meta property="og:url" content="https://ksaxena.tech/projects.html" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script>
+      (function () {
+        var prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var stored = null;
+        try {
+          stored = localStorage.getItem("color-scheme");
+        } catch (e) {}
+        if (stored === "dark" || (!stored && prefersDark))
+          document.documentElement.classList.add("dark");
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo" aria-label="Kartikay Saxena — home">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <title>Kartikay Saxena @ ksaxena.tech</title>
+          <path
+            class="stroke"
+            d="M32 14C29 38 29 62 32 86M32 54C44 45 59 31 70 15M38 50C50 60 63 72 74 87"
+          />
+        </svg>
+      </a>
+
+      <nav class="nav">
+        <div class="spacer"></div>
+        <div class="right">
+          <a href="projects.html" title="Projects" aria-current="page">
+            <span class="label">Projects</span>
+            <span class="i-lightbulb icon-only"></span>
+          </a>
+          <a href="experience.html" title="Experience">
+            <span class="label">Experience</span>
+            <span class="i-briefcase icon-only"></span>
+          </a>
+          <a href="resume.html" title="Résumé">
+            <span class="label">Résumé</span>
+            <span class="i-file icon-only"></span>
+          </a>
+          <a
+            href="https://github.com/kartikaysaxena"
+            target="_blank"
+            rel="noopener"
+            title="GitHub"
+            ><span class="i-github"></span
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/kartikay-saxena-33ba01223/"
+            target="_blank"
+            rel="noopener"
+            title="LinkedIn"
+            ><span class="i-linkedin"></span
+          ></a>
+          <button
+            data-toggle-scheme
+            title="Toggle colour scheme"
+            aria-label="Toggle colour scheme"
+          >
+            <span class="i-sun"></span><span class="i-moon"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="prose slide-enter-content">
+        <h1>Projects</h1>
+        <p>
+          Things I’ve built or contributed meaningfully to. Most of it is open
+          source; the rest is infrastructure that only shows its face when it
+          breaks.
+        </p>
+      </div>
+
+      <div class="prose slide-enter" style="--enter-stage: 3">
+        <h2>Open Source</h2>
+        <div class="project-grid">
+          <a
+            class="project"
+            href="https://litmuschaos.io"
+            target="_blank"
+            rel="noopener"
+          >
+            <span
+              class="glyph img"
+              style="background-image: url('https://github.com/litmuschaos.png')"
+            ></span>
+            <span>
+              <span class="title">Litmus Upgrade Agent</span>
+              <span class="desc"
+                >Sequential upgrade pipeline for the LitmusChaos control plane,
+                including automated MongoDB schema migrations. Cut manual
+                intervention during upgrades by ~30%.</span
+              >
+            </span>
+          </a>
+
+          <a
+            class="project"
+            href="https://organicmaps.app"
+            target="_blank"
+            rel="noopener"
+          >
+            <span
+              class="glyph img"
+              style="
+                background-image: url('https://github.com/organicmaps.png');
+              "
+            ></span>
+            <span>
+              <span class="title">Organic Maps URL Proxy</span>
+              <span class="desc"
+                >Google Summer of Code. A TypeScript proxy on Cloudflare Workers
+                that rewrites Google Maps URIs for the iOS and Android apps —
+                50K+ requests a day at 99.9% uptime.</span
+              >
+            </span>
+          </a>
+
+          <a
+            class="project"
+            href="https://github.com/dhiway"
+            target="_blank"
+            rel="noopener"
+          >
+            <span
+              class="glyph img"
+              style="background-image: url('https://github.com/dhiway.png')"
+            ></span>
+            <span>
+              <span class="title">CORD Blockchain Go SDK</span>
+              <span class="desc"
+                >Code for GovTech. A multi-modular Go SDK for the CORD
+                blockchain, with unit and fuzz tests bringing it to 95%
+                coverage.</span
+              >
+            </span>
+          </a>
+
+          <a
+            class="project"
+            href="https://github.com/cncf"
+            target="_blank"
+            rel="noopener"
+          >
+            <span
+              class="glyph img"
+              style="background-image: url('https://github.com/cncf.png')"
+            ></span>
+            <span>
+              <span class="title">Litmus Auth Server</span>
+              <span class="desc"
+                >Profiled and rewrote the login path, taking latency from 1.73s
+                to 15.87ms — a 98.8% reduction.</span
+              >
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="prose slide-enter" style="--enter-stage: 4">
+        <h2>Personal</h2>
+        <div class="project-grid">
+          <a
+            class="project"
+            href="https://github.com/kartikaysaxena/go-microservice"
+            target="_blank"
+            rel="noopener"
+          >
+            <span
+              class="glyph img"
+              style="background-image: url('https://github.com/golang.png')"
+            ></span>
+            <span>
+              <span class="title">go-microservice</span>
+              <span class="desc"
+                >HTTP API server with gRPC rate throttling, Redis-backed caching
+                and Prometheus/Grafana instrumentation.</span
+              >
+            </span>
+          </a>
+
+          <a
+            class="project"
+            href="https://github.com/kartikaysaxena/resume-vault"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="glyph i-file"></span>
+            <span>
+              <span class="title">resume-vault</span>
+              <span class="desc"
+                >One LaTeX source per role, recompiled to PDF by GitHub Actions
+                on every push. No local TeX install required.</span
+              >
+            </span>
+          </a>
+
+          <a
+            class="project"
+            href="https://github.com/kartikaysaxena/Portfolio"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="glyph i-home"></span>
+            <span>
+              <span class="title">This site</span>
+              <span class="desc"
+                >Hand-written HTML and CSS, no framework and no build step, with
+                a generative canvas backdrop.</span
+              >
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="prose slide-enter" style="--enter-stage: 5">
+        <hr />
+        <p>
+          Everything else lives on
+          <a
+            href="https://github.com/kartikaysaxena?tab=repositories"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >.
+        </p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <span
+        ><a
+          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+          target="_blank"
+          rel="noopener"
+          >CC BY-NC-SA 4.0</a
+        >
+        2023–PRESENT © Kartikay Saxena</span
+      >
+      <span style="flex: auto"></span>
+      <a
+        href="https://github.com/kartikaysaxena/Portfolio"
+        target="_blank"
+        rel="noopener"
+        >Source</a
+      >
+    </footer>
+
+    <button class="to-top" title="Scroll to top" aria-label="Scroll to top">
+      <span class="i-arrow-up"></span>
+    </button>
+
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

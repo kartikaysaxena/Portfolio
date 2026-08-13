@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Experience — Kartikay Saxena</title>
+    <meta
+      name="description"
+      content="Where Kartikay Saxena has worked: Assured Health Technologies, CNCF LitmusChaos, Code for GovTech, and Google Summer of Code at Organic Maps."
+    />
+    <meta name="author" content="Kartikay Saxena" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://ksaxena.tech/experience.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Experience — Kartikay Saxena" />
+    <meta property="og:url" content="https://ksaxena.tech/experience.html" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script>
+      (function () {
+        var prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var stored = null;
+        try {
+          stored = localStorage.getItem("color-scheme");
+        } catch (e) {}
+        if (stored === "dark" || (!stored && prefersDark))
+          document.documentElement.classList.add("dark");
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo" aria-label="Kartikay Saxena — home">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <title>Kartikay Saxena @ ksaxena.tech</title>
+          <path
+            class="stroke"
+            d="M32 14C29 38 29 62 32 86M32 54C44 45 59 31 70 15M38 50C50 60 63 72 74 87"
+          />
+        </svg>
+      </a>
+
+      <nav class="nav">
+        <div class="spacer"></div>
+        <div class="right">
+          <a href="projects.html" title="Projects">
+            <span class="label">Projects</span>
+            <span class="i-lightbulb icon-only"></span>
+          </a>
+          <a href="experience.html" title="Experience" aria-current="page">
+            <span class="label">Experience</span>
+            <span class="i-briefcase icon-only"></span>
+          </a>
+          <a href="resume.html" title="Résumé">
+            <span class="label">Résumé</span>
+            <span class="i-file icon-only"></span>
+          </a>
+          <a
+            href="https://github.com/kartikaysaxena"
+            target="_blank"
+            rel="noopener"
+            title="GitHub"
+            ><span class="i-github"></span
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/kartikay-saxena-33ba01223/"
+            target="_blank"
+            rel="noopener"
+            title="LinkedIn"
+            ><span class="i-linkedin"></span
+          ></a>
+          <button
+            data-toggle-scheme
+            title="Toggle colour scheme"
+            aria-label="Toggle colour scheme"
+          >
+            <span class="i-sun"></span><span class="i-moon"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="prose slide-enter-content">
+        <h1>Experience</h1>
+        <p>
+          Four roles so far, all of them somewhere in the backend or the
+          infrastructure underneath it. The
+          <a href="resume.html">résumé</a> has the same story in one page.
+        </p>
+      </div>
+
+      <div class="prose slide-enter" style="--enter-stage: 3">
+        <h2>Work</h2>
+
+        <div class="entry">
+          <div class="entry-head">
+            <span class="role">Software Engineering Consultant</span>
+            <span class="when">Aug 2025 – Jan 2026</span>
+          </div>
+          <div class="entry-org">Assured Health Technologies · Bengaluru</div>
+          <ul>
+            <li>
+              Optimised a Django API from <span class="metric">35.7s</span> to
+              <span class="metric">3.7s</span> by adding the right indexes and
+              removing redundant mutating queries during prefetch.
+            </li>
+            <li>
+              Wrote 17 Python migration scripts that backfilled and corrected
+              fields across the production database.
+            </li>
+            <li>
+              Automated production deploys on AWS with CloudFormation, cutting
+              deployment time by <span class="metric">67%</span>.
+            </li>
+            <li>
+              Moved builds onto the Bun runtime, reducing compile and run time
+              by <span class="metric">53%</span>.
+            </li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <span class="role">Software Engineering Intern</span>
+            <span class="when">Jul 2024 – Sep 2024</span>
+          </div>
+          <div class="entry-org">
+            Cloud Native Computing Foundation, under
+            <a href="https://litmuschaos.io" target="_blank" rel="noopener"
+              >LitmusChaos</a
+            >
+            · Remote
+          </div>
+          <ul>
+            <li>
+              Built an upgrade agent that streamlines version transitions for
+              Litmus, reducing manual intervention during upgrades by
+              <span class="metric">30%</span>.
+            </li>
+            <li>
+              Engineered a sequential upgrade pipeline covering both control
+              plane and database migrations.
+            </li>
+            <li>
+              Automated MongoDB schema upgrades via manifests, so each new
+              Litmus release migrates itself.
+            </li>
+            <li>
+              Brought auth server login latency down from
+              <span class="metric">1.73s</span> to
+              <span class="metric">15.87ms</span> — a
+              <span class="metric">98.8%</span> improvement.
+            </li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <span class="role">Software Engineering Intern</span>
+            <span class="when">Jun 2024 – Aug 2024</span>
+          </div>
+          <div class="entry-org">
+            Code for GovTech Dedicated Mentoring Program, under
+            <a href="https://github.com/dhiway" target="_blank" rel="noopener"
+              >Dhiway</a
+            >
+            · Remote
+          </div>
+          <ul>
+            <li>
+              Designed a Go SDK for the CORD blockchain so services could
+              integrate its features directly, with
+              <span class="metric">95%</span> test coverage.
+            </li>
+            <li>
+              Wrote the unit and fuzz test suites that got the multi-modular SDK
+              there.
+            </li>
+            <li>
+              Introduced CI and release practices that shortened code review
+              turnaround by <span class="metric">30%</span>.
+            </li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <span class="role">Google Summer of Code Intern</span>
+            <span class="when">Apr 2023 – Jul 2023</span>
+          </div>
+          <div class="entry-org">
+            <a href="https://organicmaps.app" target="_blank" rel="noopener"
+              >Organic Maps</a
+            >
+            · Remote
+          </div>
+          <ul>
+            <li>
+              Built a proxy in TypeScript and Node on Cloudflare Workers serving
+              <span class="metric">50K+</span> requests a day at
+              <span class="metric">99.9%</span> uptime.
+            </li>
+            <li>
+              Architected the URI translation layer that converts Google Maps
+              links into Organic Maps’ own format, cutting load time by
+              <span class="metric">60%</span>.
+            </li>
+            <li>
+              Integrated it into the iOS and Android apps, improving data fetch
+              speed by <span class="metric">30%</span> on mobile.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prose slide-enter" style="--enter-stage: 4">
+        <h2>Toolbox</h2>
+
+        <h4>Languages</h4>
+        <div class="chips">
+          <span>Go</span><span>TypeScript</span><span>JavaScript</span
+          ><span>Python</span><span>Rust</span><span>C++</span><span>PHP</span
+          ><span>SQL</span>
+        </div>
+
+        <h4>Frameworks</h4>
+        <div class="chips">
+          <span>Express</span><span>React</span><span>Django</span
+          ><span>Socket.io</span><span>Web3.js</span><span>gRPC</span>
+        </div>
+
+        <h4>Infrastructure &amp; data</h4>
+        <div class="chips">
+          <span>AWS</span><span>Kubernetes</span><span>Docker</span
+          ><span>Ansible</span><span>Prometheus</span><span>Thanos</span
+          ><span>OpenTelemetry</span><span>Apache Kafka</span
+          ><span>MongoDB</span><span>MySQL</span><span>Redis</span>
+        </div>
+      </div>
+
+      <div class="prose slide-enter" style="--enter-stage: 5">
+        <h2>Education</h2>
+        <div class="entry">
+          <div class="entry-head">
+            <span class="role">Indian Institute of Technology Patna</span>
+            <span class="when">2025</span>
+          </div>
+          <div class="entry-org">Bachelor of Technology</div>
+        </div>
+      </div>
+
+      <div class="prose slide-enter" style="--enter-stage: 6">
+        <h2>Elsewhere on campus</h2>
+        <div class="entry">
+          <div class="entry-head">
+            <span class="role">Dev Team Coordinator</span>
+            <span class="when">Dec 2022 – Feb 2023</span>
+          </div>
+          <div class="entry-org">Celesta, the IIT Patna tech fest</div>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <span class="role">Web &amp; App Team Coordinator</span>
+            <span class="when">Dec 2022 – Jan 2023</span>
+          </div>
+          <div class="entry-org">Infinito, the IIT Patna sports fest</div>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <span class="role">Member</span>
+            <span class="when">May 2022 – Nov 2022</span>
+          </div>
+          <div class="entry-org">Google Developer Student Clubs, IIT Patna</div>
+        </div>
+      </div>
+
+      <div class="prose slide-enter" style="--enter-stage: 7">
+        <h2>Odds and ends</h2>
+        <ul>
+          <li>6th place at Inter IIT Tech Meet 12.0.</li>
+          <li>200 problems solved across LeetCode and Codeforces.</li>
+          <li>
+            Admitted to IIT from the top 1 percentile of roughly a million
+            applicants.
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <span
+        ><a
+          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+          target="_blank"
+          rel="noopener"
+          >CC BY-NC-SA 4.0</a
+        >
+        2023–PRESENT © Kartikay Saxena</span
+      >
+      <span style="flex: auto"></span>
+      <a
+        href="https://github.com/kartikaysaxena/Portfolio"
+        target="_blank"
+        rel="noopener"
+        >Source</a
+      >
+    </footer>
+
+    <button class="to-top" title="Scroll to top" aria-label="Scroll to top">
+      <span class="i-arrow-up"></span>
+    </button>
+
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
