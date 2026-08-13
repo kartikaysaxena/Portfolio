@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------------
-   Kartikay Saxena — portfolio
+   Kartikay Saxena â€” portfolio
    Minimal, text-first design in the spirit of antfu.me.
 --------------------------------------------------------------------------- */
 
@@ -130,9 +130,6 @@ canvas {
   vertical-align: -0.2em;
 }
 
-.i-article {
-  --icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="black" d="M20 22H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1m-1-2V4H5v16zM7 6h4v4H7zm0 6h10v2H7zm0 4h10v2H7zm6-9h4v2h-4z"/></svg>');
-}
 .i-lightbulb {
   --icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="black" d="M9.973 18H11v-5h2v5h1.027c.132-1.202.745-2.193 1.74-3.277c.113-.122.832-.867.917-.973a6 6 0 1 0-9.37-.002c.086.107.807.853.918.974c.996 1.084 1.609 2.076 1.741 3.278M10 20v1h4v-1zm-4.246-5a8 8 0 1 1 12.49.002C17.624 15.774 16 17 16 18.5V21a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2.5C8 17 6.375 15.774 5.754 15"/></svg>');
 }
@@ -160,22 +157,12 @@ canvas {
 .i-leetcode {
   --icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="black" d="M13.483 0a1.37 1.37 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.3 5.3 0 0 0-1.209 2.104a5 5 0 0 0-.125.513a5.5 5.5 0 0 0 .062 2.362a6 6 0 0 0 .349 1.017a5.9 5.9 0 0 0 1.271 1.818l4.277 4.193l.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.38 1.38 0 0 0-1.951-.003l-2.396 2.392a3.02 3.02 0 0 1-4.205.038l-.02-.019l-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.7 2.7 0 0 1 .066-.523a2.55 2.55 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0m-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382a1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382a1.38 1.38 0 0 0-1.38-1.382z"/></svg>');
 }
-.i-mail {
-  --icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="black" d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1m17 4.238l-7.928 7.1L4 7.216V19h16zM4.511 5l7.55 6.662L19.502 5z"/></svg>');
-}
 .i-at {
   --icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="black" d="M16 3A12.92 12.92 0 0 0 3 16v1a13 13 0 0 0 13 13h7v-2h-7A11 11 0 0 1 5 17v-1A10.94 10.94 0 0 1 16 5a10.64 10.64 0 0 1 11 11c0 3.59-1.4 5-3.66 5c-1.58 0-2.34-1.29-2.34-3v-8h-2v1.94A3.84 3.84 0 0 0 15.5 10a5.48 5.48 0 0 0-5.5 5.44v2.12A5.48 5.48 0 0 0 15.5 23a4.28 4.28 0 0 0 4-2.46A4.35 4.35 0 0 0 23.41 23c3.07 0 5.59-2 5.59-7A12.72 12.72 0 0 0 16 3m3 14.56a3.5 3.5 0 0 1-7 0v-2.12a3.5 3.5 0 0 1 7 0Z"/></svg>');
-}
-.i-external {
-  --icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="black" d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm11-3v8h-2V6.413l-7.793 7.794l-1.414-1.414L17.585 5H13V3z"/></svg>');
 }
 .i-home {
   --icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="black" d="M21 20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.49a1 1 0 0 1 .386-.79l8-6.223a1 1 0 0 1 1.228 0l8 6.223a1 1 0 0 1 .386.79zm-2-1V9.978l-7-5.444l-7 5.444V19z"/></svg>');
 }
-.i-star {
-  --icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="black" d="m12 18.26l-7.053 3.948l1.575-7.928L.588 8.792l8.027-.952L12 .5l3.385 7.34l8.027.952l-5.934 5.488l1.575 7.928zm0-2.292l4.247 2.377l-.948-4.773l3.573-3.305l-4.833-.573l-2.038-4.419l-2.039 4.42l-4.833.572l3.573 3.305l-.948 4.773z"/></svg>');
-}
-
 [class^="i-"],
 [class*=" i-"] {
   -webkit-mask-image: var(--icon);
@@ -325,7 +312,7 @@ html.dark .nav button .i-moon {
 /* --- Layout ------------------------------------------------------------- */
 
 main {
-  padding: 2.5rem 1.75rem 1rem;
+  padding: 2.5rem 1.75rem 5rem;
   overflow-x: hidden;
 }
 
@@ -489,7 +476,7 @@ a.item:hover {
   opacity: 1;
 }
 
-/* Pill link with a favicon, à la antfu's "magic links". */
+/* Pill link with a favicon, Ã  la antfu's "magic links". */
 .magic-link {
   display: inline-flex;
   align-items: center;
@@ -698,34 +685,6 @@ a.item:hover {
   font-family: var(--font-mono);
 }
 
-/* --- Résumé preview ----------------------------------------------------- */
-
-.prose.wide {
-  --prose-max-width: 80ch;
-}
-
-.pdf-frame {
-  width: 100%;
-  aspect-ratio: 1 / 1.414;
-  border: 1px solid var(--c-border);
-  border-radius: 0.5rem;
-  background: #8881;
-}
-
-.pdf-fallback {
-  display: none;
-}
-
-/* Mobile browsers largely refuse to render embedded PDFs. */
-@media (max-width: 767px) {
-  .pdf-frame {
-    display: none;
-  }
-  .pdf-fallback {
-    display: block;
-  }
-}
-
 /* --- Scroll-to-top ------------------------------------------------------ */
 
 .to-top {
@@ -755,29 +714,6 @@ a.item:hover {
 .to-top.show:hover {
   opacity: 1;
   background: #8883;
-}
-
-/* --- Footer ------------------------------------------------------------- */
-
-.footer {
-  max-width: var(--prose-max-width);
-  margin: 2.5rem auto 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-  align-items: center;
-  font-size: 0.875rem;
-  opacity: 0.5;
-}
-
-.footer a {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-
-.footer a:hover {
-  border-bottom-color: currentColor;
 }
 
 /* --- Generative background ---------------------------------------------- */

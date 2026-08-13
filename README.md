@@ -26,24 +26,24 @@ open a file and it runs.
 index.html          Home — bio and links
 projects.html       Projects, grouped by open source / personal
 experience.html     Roles, toolbox, education, odds and ends
-resume.html         Embedded PDF preview + download
 404.html            Not-found page (uses absolute asset paths on purpose)
 styles/main.css     The whole design system
 scripts/app.js      Colour scheme toggle, scroll-to-top
 scripts/plum.js     Generative canvas backdrop
-assets/             Résumé PDF
 favicon.svg
 serve.mjs           Zero-dependency dev server
 CNAME               ksaxena.tech
 ```
 
-The résumé PDF is a **copy** of `software_engineer/software-engineer.pdf` from
+The **Résumé** nav link points straight at the PDF published by
 [resume-vault](https://github.com/kartikaysaxena/resume-vault), where a GitHub
-Action recompiles it from LaTeX on every push. Refresh it with:
+Action recompiles it from LaTeX on every push:
 
-```bash
-cp ../resume-vault/software_engineer/software-engineer.pdf assets/kartikay-saxena-resume.pdf
 ```
+https://kartikaysaxena.github.io/resume-vault/software_engineer/software-engineer.pdf
+```
+
+Nothing to sync — there's no copy of the PDF in this repo.
 
 ## Development
 
@@ -52,9 +52,6 @@ node serve.mjs          # → http://localhost:8000
 # or, if you'd rather:
 python -m http.server 8000
 ```
-
-A server is preferred over opening the files directly, since `file://` blocks
-the PDF preview.
 
 ## Deploy
 

@@ -1,14 +1,28 @@
-// Generative fractal-branch backdrop, ported from antfu's ArtPlum sketch.
-// Plain Canvas2D, no dependencies. Draws once per load and on resize.
+// Generative fractal-branch backdrop, after antfu's ArtPlum sketch.
+// Plain Canvas2D, no dependencies.
 
 (function () {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
   const R180 = Math.PI;
   const R90 = Math.PI / 2;
   const R15 = Math.PI / 12;
-  const MIN_BRANCH = 30;
+
+  // A tree branches eagerly until it has this many segments, then settles to a
+  // rate where each branch replaces itself roughly once — a critical process,
+  // so past this point a tree may run for a long time or stop almost at once.
+  // The threshold is what decides how big a tree gets before that coin flip.
+  const MIN_BRANCH = 60;
+  const EAGER_RATE = 0.8;
+  const SETTLED_RATE = 0.5;
   const LEN = 6;
+  const FPS = 40;
+
+  // One seed per this many pixels of edge, and one segment per this many pixels
+  // of area. Both scale with the viewport so a phone isn't asked to draw a
+  // desktop's worth of branches.
+  const PX_PER_SEED = 280;
+  const PX_PER_SEGMENT = 23;
+
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const random = Math.random;
 
   const canvas = document.createElement("canvas");
@@ -19,16 +33,14 @@
   let width = 0;
   let height = 0;
   let ctx = null;
-  let stopped = false;
+  let generation = 0;
+  let points = [];
+  let maxPoints = 0;
 
   const strokeColor = () =>
     document.documentElement.classList.contains("dark")
-      ? "rgba(190, 200, 220, 0.16)"
-      : "rgba(90, 100, 120, 0.20)";
-
-  function polar2cart(x, y, r, theta) {
-    return [x + r * Math.cos(theta), y + r * Math.sin(theta)];
-  }
+      ? "rgba(198, 208, 228, 0.18)"
+      : "rgba(72, 84, 106, 0.26)";
 
   function initCanvas() {
     const dpr = window.devicePixelRatio || 1;
@@ -42,69 +54,122 @@
     ctx.scale(dpr, dpr);
     ctx.lineWidth = 1;
     ctx.strokeStyle = strokeColor();
+
+    const budget = Math.round((width * height) / PX_PER_SEGMENT);
+    maxPoints = Math.min(Math.max(budget, 8000), 120000) * 4;
   }
 
-  function step(x, y, rad, counter, push) {
-    const length = random() * LEN;
-    counter.value += 1;
-    const [nx, ny] = polar2cart(x, y, length, rad);
-
+  // Re-stroke everything grown so far in the current colour. Lets a theme
+  // switch recolour the tree instantly instead of regrowing from a bare canvas.
+  function repaint() {
+    if (!ctx) return;
+    ctx.clearRect(0, 0, width, height);
+    ctx.strokeStyle = strokeColor();
     ctx.beginPath();
+    for (let i = 0; i < points.length; i += 4) {
+      ctx.moveTo(points[i], points[i + 1]);
+      ctx.lineTo(points[i + 2], points[i + 3]);
+    }
+    ctx.stroke();
+  }
+
+  // Adds to the path currently open on ctx; the caller strokes once per frame.
+  function step(x, y, rad, counter, push) {
+    if (points.length >= maxPoints) return;
+
+    counter.value += 1;
+    const length = random() * LEN;
+    const nx = x + length * Math.cos(rad);
+    const ny = y + length * Math.sin(rad);
+
+    points.push(x, y, nx, ny);
     ctx.moveTo(x, y);
     ctx.lineTo(nx, ny);
-    ctx.stroke();
 
     if (nx < -100 || nx > width + 100 || ny < -100 || ny > height + 100) return;
 
-    // Branch eagerly at first, then taper off so the canvas stays airy.
-    const rate = counter.value <= MIN_BRANCH ? 0.8 : 0.5;
-    if (random() < rate) push(() => step(nx, ny, rad + random() * R15, counter, push));
-    if (random() < rate) push(() => step(nx, ny, rad - random() * R15, counter, push));
+    const rate = counter.value <= MIN_BRANCH ? EAGER_RATE : SETTLED_RATE;
+    if (random() < rate)
+      push(() => step(nx, ny, rad + random() * R15, counter, push));
+    if (random() < rate)
+      push(() => step(nx, ny, rad - random() * R15, counter, push));
   }
 
-  const randomMiddle = () => random() * 0.6 + 0.2;
+  // Entry points spread around the whole frame rather than one per edge, so a
+  // wide viewport fills in instead of leaving the middle bare. Positions are
+  // jittered within their slot to avoid an obviously even spacing.
+  function seeds() {
+    const spread = (count) =>
+      Array.from(
+        { length: count },
+        (_, i) => (i + 0.5 + (random() - 0.5) * 0.7) / count
+      );
+
+    const cols = Math.max(2, Math.round(width / PX_PER_SEED));
+    const rows = Math.max(1, Math.round(height / PX_PER_SEED));
+    const list = [];
+
+    spread(cols).forEach((t) => list.push([t * width, -5, R90]));
+    spread(cols).forEach((t) => list.push([t * width, height + 5, -R90]));
+    spread(rows).forEach((t) => list.push([-5, t * height, 0]));
+    spread(rows).forEach((t) => list.push([width + 5, t * height, R180]));
+
+    return list;
+  }
 
   function start() {
-    stopped = true;
-    requestAnimationFrame(() => {
-      stopped = false;
-      ctx.strokeStyle = strokeColor();
-      ctx.clearRect(0, 0, width, height);
+    const run = ++generation;
+    points = [];
 
-      let steps = [];
-      const push = (fn) => steps.push(fn);
+    ctx.clearRect(0, 0, width, height);
+    ctx.strokeStyle = strokeColor();
 
-      // One seed creeping in from each edge.
-      step(randomMiddle() * width, -5, R90, { value: 0 }, push);
-      step(randomMiddle() * width, height + 5, -R90, { value: 0 }, push);
-      step(-5, randomMiddle() * height, 0, { value: 0 }, push);
-      step(width + 5, randomMiddle() * height, R180, { value: 0 }, push);
+    let queue = [];
+    const push = (fn) => queue.push(fn);
 
-      // Drain the queue at ~25fps, deferring half the work each frame so the
-      // branches grow at an organic, uneven pace.
-      const interval = 1000 / 25;
-      let lastTime = performance.now();
+    ctx.beginPath();
+    seeds().forEach(([x, y, rad]) => step(x, y, rad, { value: 0 }, push));
+    ctx.stroke();
 
-      const frame = () => {
-        if (stopped) return;
-        if (performance.now() - lastTime < interval) {
-          requestAnimationFrame(frame);
-          return;
-        }
-        lastTime = performance.now();
+    if (reduced) {
+      while (queue.length && points.length < maxPoints) {
+        const pending = queue;
+        queue = [];
+        ctx.beginPath();
+        pending.forEach((fn) => fn());
+        ctx.stroke();
+      }
+      return;
+    }
 
-        const pending = steps;
-        steps = [];
-        pending.forEach((fn) => {
-          if (random() < 0.5) steps.push(fn);
-          else fn();
-        });
+    const interval = 1000 / FPS;
+    let last = performance.now();
 
-        if (steps.length) requestAnimationFrame(frame);
-      };
+    const frame = () => {
+      if (run !== generation) return;
+      if (performance.now() - last < interval) {
+        requestAnimationFrame(frame);
+        return;
+      }
+      last = performance.now();
 
-      requestAnimationFrame(frame);
-    });
+      const pending = queue;
+      queue = [];
+
+      // Deferring half the queue to a later frame keeps growth uneven, so
+      // branches creep rather than expanding as a uniform front.
+      ctx.beginPath();
+      pending.forEach((fn) => {
+        if (random() < 0.5) queue.push(fn);
+        else fn();
+      });
+      ctx.stroke();
+
+      if (queue.length && points.length < maxPoints)
+        requestAnimationFrame(frame);
+    };
+
+    requestAnimationFrame(frame);
   }
 
   let resizeTimer;
@@ -116,11 +181,7 @@
     }, 200);
   });
 
-  window.addEventListener("schemechange", () => {
-    if (!ctx) return;
-    ctx.strokeStyle = strokeColor();
-    start();
-  });
+  window.addEventListener("schemechange", repaint);
 
   initCanvas();
   start();
