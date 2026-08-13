@@ -13,7 +13,7 @@
   const MIN_BRANCH = 60;
   const EAGER_RATE = 0.8;
   const SETTLED_RATE = 0.5;
-  const LEN = 6;
+  const LEN = 7;
   const FPS = 40;
 
   // One seed per this many pixels of edge, and one segment per this many pixels
