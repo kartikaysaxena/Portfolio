@@ -3,117 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kartikay Saxena — Software Engineer</title>
-  <meta name="description" content="Kartikay Saxena — Software Engineering Consultant & IIT Patna graduate. Go, TypeScript, Python, AWS, Kubernetes. Open-source contributor (GSoC, CNCF LitmusChaos)." />
+  <title>Kartikay Saxena</title>
+  <meta name="description" content="Kartikay Saxena — Software engineer. IIT Patna graduate, consultant, and open-source contributor." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a class="logo" href="#top">KS<span class="dot">.</span></a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <header class="hero" id="top">
-    <div class="hero-inner">
-      <p class="eyebrow">Hi, my name is</p>
-      <h1 class="hero-name">Kartikay Saxena<span class="dot">.</span></h1>
-      <p class="hero-title">I build software for the cloud.</p>
-      <p class="hero-desc">
-        Software Engineering Consultant and B.Tech graduate from <strong>Indian Institute of Technology Patna</strong>.
-        I specialize in <strong>Go, TypeScript & Python</strong>, scalable backend systems, cloud infrastructure,
-        and open-source software.
-      </p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#experience">View my work</a>
-        <a class="btn btn-ghost" href="#resume">Get resume</a>
-      </div>
-      <div class="hero-meta">
-        <span class="chip">🏫 IIT Patna · 2025</span>
-        <span class="chip">⚙️ Consultant · CNCF · GSoC</span>
-      </div>
-    </div>
+  <header class="nav">
+    <a class="nav-brand" href="#top">Kartikay Saxena</a>
+    <nav class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="section-inner">
-      <h2 class="section-title">About me</h2>
+  <main id="top">
+    <h1 class="name">Kartikay Saxena</h1>
+
+    <article class="bio">
       <p>
-        I'm a software engineer who loves building reliable, observable systems. My experience spans
-        consulting work on production Django + AWS platforms, open-source contributions to the
-        <strong>Cloud Native Computing Foundation</strong> (LitmusChaos) and <strong>Google Summer of Code</strong>
-        (Organic Maps), and building blockchain tooling with <strong>Go</strong>.
+        Hey! I'm <strong>Kartikay Saxena</strong>, a software engineer who loves building
+        reliable systems for the cloud.
       </p>
+
       <p>
-        I care about performance — optimizing APIs, cutting latencies by 95%+, and designing systems that
-        scale cleanly. I've also contributed to projects across CNCF, Google, and Dhiway.
+        Working as a <a href="#experience">Software Engineering Consultant</a> at Assured Health Technologies<br />
+        B.Tech graduate of <a href="https://www.iitp.ac.in" target="_blank" rel="noopener">IIT Patna</a><br />
+        Open-source contributor — <a href="https://summerofcode.withgoogle.com" target="_blank" rel="noopener">Google Summer of Code</a> · <a href="https://litmuschaos.io" target="_blank" rel="noopener">CNCF LitmusChaos</a>
       </p>
-      <div class="skill-tags">
-        <span>Go</span><span>TypeScript</span><span>JavaScript</span><span>Python</span><span>Rust</span><span>C++</span><span>SQL</span>
-        <span>Node.js</span><span>React</span><span>Django</span><span>Express</span>
-        <span>AWS</span><span>Docker</span><span>Kubernetes</span><span>Kafka</span><span>Prometheus</span><span>MongoDB</span><span>MySQL</span>
-      </div>
-    </div>
-  </section>
 
-  <!-- EXPERIENCE -->
-  <section class="section section-alt" id="experience">
-    <div class="section-inner">
-      <h2 class="section-title">Experience</h2>
-      <div class="timeline" id="timeline"></div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="section" id="projects">
-    <div class="section-inner">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects" id="projectsGrid"></div>
-    </div>
-  </section>
-
-  <!-- RESUME -->
-  <section class="section section-alt" id="resume">
-    <div class="section-inner center">
-      <h2 class="section-title">Resume</h2>
-      <p class="muted">
-        Download my latest resume as a PDF — updated automatically from my resume vault.
+      <p>
+        I enjoy optimizing performance — cutting API latencies by 95%+, designing systems that
+        scale cleanly, and building tools that make engineers more productive. My stack centers on
+        <strong>Go</strong>, <strong>TypeScript</strong>, and <strong>Python</strong>, with AWS, Kubernetes,
+        and the broader cloud-native ecosystem. Here's my <a href="#projects">projects list</a>.
       </p>
-      <a class="btn btn-primary" href="https://kartikaysaxena.github.io/resume-vault/software_engineer/software-engineer.pdf" target="_blank" rel="noopener">
-        ⬇ Download PDF Resume
-      </a>
-    </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="section-inner center">
-      <h2 class="section-title">Get in touch</h2>
-      <p class="muted">Have an opportunity or just want to say hi? I'd love to hear from you.</p>
-      <div class="contact-links">
-        <a href="mailto:kartikaysaxena12@gmail.com">✉️ kartikaysaxena12@gmail.com</a>
+      <p>
+        Outside of programming, I enjoy problem solving, contributing to open source, and
+        exploring how good engineering habits ship better software.
+      </p>
+
+      <p>Find me on</p>
+
+      <p class="social">
         <a href="https://github.com/kartikaysaxena" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/kartikay-saxena-33ba01223/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-  </section>
+        <a href="https://leetcode.com/u/annoyingdeadlock/" target="_blank" rel="noopener">LeetCode</a>
+      </p>
+
+      <p>Or mail me at <a href="mailto:kartikaysaxena12@gmail.com">kartikaysaxena12@gmail.com</a></p>
+    </article>
+
+    <section id="projects" class="block">
+      <h2>Projects</h2>
+      <p><a href="https://github.com/kartikaysaxena/go-microservice" target="_blank" rel="noopener">Go-microservice</a> — HTTP API server with gRPC rate throttling, Redis caching, and Prometheus/Grafana observability.</p>
+      <p><a href="https://organicmaps.app" target="_blank" rel="noopener">Cloudflare Maps Proxy</a> — GSoC project serving 50K+ req/day at 99.9% uptime on Cloudflare Workers.</p>
+      <p><a href="https://dhiway.com" target="_blank" rel="noopener">CORD Blockchain Go SDK</a> — multi-modular Go SDK with 95% test coverage.</p>
+    </section>
+
+    <section id="experience" class="block">
+      <h2>Experience</h2>
+      <p><strong>Software Engineering Consultant</strong> — <a href="#contact">Assured Health Technologies</a>, Bengaluru · Aug 2025 – Jan 2026</p>
+      <p><strong>Software Engineering Intern</strong> — <a href="https://litmuschaos.io" target="_blank" rel="noopener">CNCF LitmusChaos</a>, Remote · Jul 2024 – Sep 2024</p>
+      <p><strong>Software Engineering Intern</strong> — <a href="https://dhiway.com" target="_blank" rel="noopener">Code For GovTech @ Dhiway</a>, Remote · Jun 2024 – Aug 2024</p>
+      <p><strong>Google Summer of Code Intern</strong> — <a href="https://organicmaps.app" target="_blank" rel="noopener">Organic Maps</a>, Remote · Apr 2023 – Jul 2023</p>
+    </section>
+
+    <section id="resume" class="block">
+      <h2>Resume</h2>
+      <p>Download my latest resume: <a href="https://kartikaysaxena.github.io/resume-vault/software_engineer/software-engineer.pdf" target="_blank" rel="noopener">software-engineer.pdf</a></p>
+    </section>
+
+    <section id="contact" class="block">
+      <h2>Contact</h2>
+      <p>
+        <a href="mailto:kartikaysaxena12@gmail.com">kartikaysaxena12@gmail.com</a> ·
+        <a href="https://github.com/kartikaysaxena" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/kartikay-saxena-33ba01223/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </section>
+  </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Kartikay Saxena · Built with care.</p>
+    <p>© <span id="year"></span> Kartikay Saxena</p>
   </footer>
 
   <script src="app.js"></script>
